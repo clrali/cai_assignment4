@@ -1,0 +1,56 @@
+{
+  "trace": "/storage/ice1/0/2/cli725/conv_ai/CAI_Assignment_4/run_output/trace.jsonl",
+  "time_to_first_audio": {
+    "turn_count": 40.0,
+    "p50_milliseconds": 327.7800385,
+    "p95_milliseconds": 473.65991195
+  },
+  "stages": {
+    "asr": {
+      "p50_milliseconds": 45.749177,
+      "p95_milliseconds": 60.942149099999995
+    },
+    "llm_start": {
+      "p50_milliseconds": 122.5770495,
+      "p95_milliseconds": 202.68875160000002
+    },
+    "speech_start": {
+      "p50_milliseconds": 135.157899,
+      "p95_milliseconds": 256.49403995
+    },
+    "llm_remaining": {
+      "p50_milliseconds": 50.407334500000005,
+      "p95_milliseconds": 125.21575894999998
+    },
+    "time_to_first_audio": {
+      "p50_milliseconds": 327.7800385,
+      "p95_milliseconds": 473.65991195
+    }
+  },
+  "waterfalls": {
+    "p50": {
+      "components_milliseconds": {
+        "asr": 44.961149999999996,
+        "llm_start": 182.591577,
+        "speech_start": 100.22731149999998
+      },
+      "ttfa_milliseconds": 327.7800385,
+      "llm_remaining_milliseconds": 29.816844500000002,
+      "lower_turn_id": "turn_0007",
+      "upper_turn_id": "turn_0033",
+      "upper_weight": 0.5
+    },
+    "p95": {
+      "components_milliseconds": {
+        "asr": 23.373863399999905,
+        "llm_start": 178.70396519999994,
+        "speech_start": 271.5820833500001
+      },
+      "ttfa_milliseconds": 473.65991195,
+      "llm_remaining_milliseconds": 122.85950155000002,
+      "lower_turn_id": "turn_0034",
+      "upper_turn_id": "turn_0017",
+      "upper_weight": 0.04999999999999716
+    }
+  }
+}

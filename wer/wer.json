@@ -1,0 +1,343 @@
+{
+  "speakers": {
+    "clara": {
+      "utterances": [
+        {
+          "recording": "clara_01.wav",
+          "reference": "set a timer for ten minutes to remind me to check the oven",
+          "transcript": "set a timer for ten minutes to remind me to check the oven",
+          "errors": 0,
+          "reference_words": 13,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_02.wav",
+          "reference": "actually extend that timer by five minutes",
+          "transcript": "actually extend that timer by five minutes",
+          "errors": 0,
+          "reference_words": 7,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_03.wav",
+          "reference": "how much time do i have left on my timer",
+          "transcript": "how much time do i have left on my timer",
+          "errors": 0,
+          "reference_words": 10,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_04.wav",
+          "reference": "start a five minute timer for my coffee and a twenty minute timer for my laundry",
+          "transcript": "start a five minute timer for my coffee and a twenty minute timer for my laundry",
+          "errors": 0,
+          "reference_words": 16,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_05.wav",
+          "reference": "cancel the coffee timer",
+          "transcript": "cancel the coffee timer",
+          "errors": 0,
+          "reference_words": 4,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_06.wav",
+          "reference": "remind me to submit my assignment at eight tonight",
+          "transcript": "remind me to submit my assignment at eight tonight",
+          "errors": 0,
+          "reference_words": 9,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_07.wav",
+          "reference": "what reminders do i currently have",
+          "transcript": "what reminders do i currently have",
+          "errors": 0,
+          "reference_words": 6,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_08.wav",
+          "reference": "what time does the hartwell community center close on sundays",
+          "transcript": "what time does the hartwell community center close on sundays",
+          "errors": 0,
+          "reference_words": 10,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_09.wav",
+          "reference": "and what time does the corner cup cafe close on saturdays",
+          "transcript": "and what time does the corner cup cafe close on saturdays",
+          "errors": 0,
+          "reference_words": 11,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_10.wav",
+          "reference": "where can i print documents and how much does color printing cost",
+          "transcript": "where can i print documents and how much does color printing cost",
+          "errors": 0,
+          "reference_words": 12,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_11.wav",
+          "reference": "how much does it cost to rent a locker for the day",
+          "transcript": "how much does it cost to rent a locker for the day",
+          "errors": 0,
+          "reference_words": 12,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_12.wav",
+          "reference": "can i bring a guest to the community center and do they need to sign in",
+          "transcript": "can i bring a guest to the community center and do they need to sign in",
+          "errors": 0,
+          "reference_words": 16,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_13.wav",
+          "reference": "does the community center have a swimming pool",
+          "transcript": "does the community center have a swimming pool",
+          "errors": 0,
+          "reference_words": 8,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_14.wav",
+          "reference": "i need to book a meeting room for six people on thursday at two in the afternoon",
+          "transcript": "i need to book a meeting room for six people on thursday at two in the afternoon",
+          "errors": 0,
+          "reference_words": 17,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_15.wav",
+          "reference": "we also need a projector for our presentation",
+          "transcript": "we also need a projector for our presentation",
+          "errors": 0,
+          "reference_words": 8,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_16.wav",
+          "reference": "yes please book it under the name clara",
+          "transcript": "please book it under the name clara",
+          "errors": 1,
+          "reference_words": 8,
+          "word_error_rate": 0.125
+        },
+        {
+          "recording": "clara_17.wav",
+          "reference": "i'd like a quiet room for two people on monday at noon",
+          "transcript": "i'd like a quiet room for two people on monday at noon",
+          "errors": 0,
+          "reference_words": 12,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_18.wav",
+          "reference": "actually can you make that three people instead",
+          "transcript": "actually can you make that three people instead",
+          "errors": 0,
+          "reference_words": 8,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "clara_19.wav",
+          "reference": "can i book a room for fifteen people with a whiteboard",
+          "transcript": "can i book a room for fifteen people with whiteboard",
+          "errors": 1,
+          "reference_words": 11,
+          "word_error_rate": 0.09090909090909091
+        },
+        {
+          "recording": "clara_20.wav",
+          "reference": "what if i only need a projector instead on wednesday at two in the afternoon",
+          "transcript": "what if i only need a projector instead on wednesday at two in the afternoon",
+          "errors": 0,
+          "reference_words": 15,
+          "word_error_rate": 0.0
+        }
+      ],
+      "errors": 2,
+      "reference_words": 213,
+      "utterance_count": 20,
+      "pooled_word_error_rate": 0.009389671361502348,
+      "mean_utterance_word_error_rate": 0.010795454545454546
+    },
+    "oankar": {
+      "utterances": [
+        {
+          "recording": "oankar_01.wav",
+          "reference": "start a timer for my pasta",
+          "transcript": "start the timer for my pasta",
+          "errors": 1,
+          "reference_words": 6,
+          "word_error_rate": 0.16666666666666666
+        },
+        {
+          "recording": "oankar_02.wav",
+          "reference": "twelve minutes please",
+          "transcript": "twelve minutes please",
+          "errors": 0,
+          "reference_words": 3,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_03.wav",
+          "reference": "cancel the pasta timer",
+          "transcript": "cancel the pasta timer",
+          "errors": 0,
+          "reference_words": 4,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_04.wav",
+          "reference": "remind me to return my library books",
+          "transcript": "remind me to return my library book",
+          "errors": 1,
+          "reference_words": 7,
+          "word_error_rate": 0.14285714285714285
+        },
+        {
+          "recording": "oankar_05.wav",
+          "reference": "at three thirty in the afternoon",
+          "transcript": "at three point three zero in the afternoon",
+          "errors": 3,
+          "reference_words": 6,
+          "word_error_rate": 0.5
+        },
+        {
+          "recording": "oankar_06.wav",
+          "reference": "what reminders do i have",
+          "transcript": "what reminders do i have",
+          "errors": 0,
+          "reference_words": 5,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_07.wav",
+          "reference": "where is the makerspace and when is it open",
+          "transcript": "where is the maker space and when is it open",
+          "errors": 2,
+          "reference_words": 9,
+          "word_error_rate": 0.2222222222222222
+        },
+        {
+          "recording": "oankar_08.wav",
+          "reference": "can i keep a tool from the makerspace overnight",
+          "transcript": "can i keep a tool from the makerspace overnight",
+          "errors": 0,
+          "reference_words": 9,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_09.wav",
+          "reference": "where is the quiet lounge and can i take a phone call there",
+          "transcript": "where is the quiet lounge and can i take a phone call there",
+          "errors": 0,
+          "reference_words": 13,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_10.wav",
+          "reference": "where can i get a document laminated and how much does it cost per page",
+          "transcript": "where can i get a document laminated and how much does the cost per page",
+          "errors": 1,
+          "reference_words": 15,
+          "word_error_rate": 0.06666666666666667
+        },
+        {
+          "recording": "oankar_11.wav",
+          "reference": "how long can i borrow a laptop and what is the late fee",
+          "transcript": "how long can i borrow a laptop and what is the late fee",
+          "errors": 0,
+          "reference_words": 13,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_12.wav",
+          "reference": "does the center offer yoga classes on sundays",
+          "transcript": "does the center offer yoga classes on sundays",
+          "errors": 0,
+          "reference_words": 8,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_13.wav",
+          "reference": "i need a room with a tv screen on monday at three in the afternoon",
+          "transcript": "i need a room with a tv screen on monday at three in the afternoon",
+          "errors": 0,
+          "reference_words": 15,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_14.wav",
+          "reference": "four people",
+          "transcript": "four people",
+          "errors": 0,
+          "reference_words": 2,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_15.wav",
+          "reference": "actually make that six people with a whiteboard instead",
+          "transcript": "actually make that six people with a whiteboard instead",
+          "errors": 0,
+          "reference_words": 9,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_16.wav",
+          "reference": "yes please book it under the name oankar",
+          "transcript": "yes please book it under the name unkar",
+          "errors": 1,
+          "reference_words": 8,
+          "word_error_rate": 0.125
+        },
+        {
+          "recording": "oankar_17.wav",
+          "reference": "can i book a quiet room for five people on thursday at noon",
+          "transcript": "can i book a quiet room for five people on thursday at noon",
+          "errors": 0,
+          "reference_words": 13,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_18.wav",
+          "reference": "what if there are only four of us at the same time",
+          "transcript": "what if there are only four of us at the same time",
+          "errors": 0,
+          "reference_words": 12,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_19.wav",
+          "reference": "which floor is that room on",
+          "transcript": "which floor is that room on",
+          "errors": 0,
+          "reference_words": 6,
+          "word_error_rate": 0.0
+        },
+        {
+          "recording": "oankar_20.wav",
+          "reference": "yes please book it under the name oankar",
+          "transcript": "yes please book it under the name omkar",
+          "errors": 1,
+          "reference_words": 8,
+          "word_error_rate": 0.125
+        }
+      ],
+      "errors": 10,
+      "reference_words": 171,
+      "utterance_count": 20,
+      "pooled_word_error_rate": 0.05847953216374269,
+      "mean_utterance_word_error_rate": 0.06742063492063491
+    }
+  },
+  "not_in_trace": []
+}
