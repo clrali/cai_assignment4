@@ -8,16 +8,13 @@ TTS: `Piper en_US lessac medium voice` from the shared cache.
 **Run behind the figures:** Job ID: 7125302 on one NVIDIA H100 80 GB HBM3; 40 turns; trace: `run_output/trace.jsonl`.
 
 ## 1. The system
-Each run replays recorded utterances through the full pipeline. ASR transcribes each utterance once the speaker is done. Rules in the `agent.py` file identify common booking intents, and LLM requests extract structured details or interpret other requests. After that, the task state is updated and an LLM call streams the spoken answer, which Piper synthesizes. ASR and interpretation finish before answer generation starts, and TTS can overlap answer generation once a sentence is ready.
-
-The task state lasts for the session and includes timer deadlines, reminders, room-booking constraints, alternatives and proposals. The `agent.py` script includes checks for capacity, equipment, and availability before proposing a room and asks for confirmation before booking. The general planner sees the last six conversation messages plus a state snapshot. The booking extractor instead sees the current utterance, the feature vocabulary and the pending field, with a JSON schema constraining its output. The extracted changes are merged with existing constraints and checks for unstated values. Booking responses are built from the verified state and streamed with constrained decoding to preserve their exact text. Lookup answers receive the knowledge base.
-
-All LLM calls use temperature 0, seed 42, and a 256-token limit. ASR and Piper each get eight CPU threads, with one ASR worker and one ONNX inter-op thread. A single TTS worker synthesizes each sentence as soon as sentence-ending punctuation followed by whitespace appears, and sends any leftover text when the stream ends. Before timing starts, a warm-up pass transcribes the first recording, exercises JSON mode and synthesizes "Ready."
+Each recorded utterance passes through ASR, rule-based or LLM interpretation, a task-state update, a streamed LLM answer, and Piper TTS. ASR waits for the utterance to end and the answer call waits for interpretation to finish, so only TTS overlaps generation, synthesizing each sentence once sentence-ending punctuation followed by whitespace appears and flushing any remaining text when the stream ends. ASR and Piper get eight CPU threads each, with one ASR worker, one ONNX inter-op thread, and a single TTS worker, and all LLM calls use temperature 0, seed 42, and a 256-token limit. Lookup questions receive the whole knowledge base, the planner sees the last six messages plus a state snapshot, and the booking extractor sees only the current utterance and its schema. Before timing starts, a warm-up pass transcribes the first recording, runs a JSON-mode call, and synthesizes "Ready."
 
 ## 2. The latency waterfall
 
 ![Stage contributions to p50 and p95 TTFA, with overlapping LLM generation shown separately](../run_output/evaluation/waterfall.svg)
 
+The values in the table below are pulled from the "stages" section of the `run_output/evaluation/summary.json` file.
 | Interval | At p50 TTFA (ms) | At p95 TTFA (ms) |
 |---|---:|---:|
 | **TTFA, all turns** | 327.78 | 473.66 |
@@ -25,7 +22,7 @@ All LLM calls use temperature 0, seed 42, and a 256-token limit. ASR and Piper e
 | LLM start: `llm_first_token` − `asr_final` | 122.58 | 202.69 |
 | Speech start: `tts_first_audio` − `llm_first_token` | 135.16 | 256.49 |
 | Overlapping LLM generation: `llm_complete` − `llm_first_token` | 50.41 | 125.22 |
-These values are pulled from the "stages" section of the `run_output/evaluation/summary.json` file.
+
 **Turns counted:** 40 of 40
 
 **How I treat stages that overlap:** `llm_first_token` marks the first nonblank spoken-answer token, so LLM start includes any interpretation requests and state handling before the spoken answer. Sentence synthesis can overlap answer generation, but first audio followed LLM completion in all 40 measured turns. The LLM remaining stage overlaps the speech-start interval and isn't added to the three TTFA stages.
@@ -53,19 +50,9 @@ The ASR handles Oankar’s voice slightly worse. The difference was sometimes co
 
 ## 5. Reproducing this
 
-From the repository root on PACE-ICE, with access to the course's shared model cache and `CAI_A4` environment, load all requirements and then run:
+From the repository root on PACE-ICE, with access to the course's shared model cache and `CAI_A4` environment, load all requirements and then run: `mkdir -p run_output` then `sbatch recipe/run_agent.sbatch`
 
-```bash
-mkdir -p run_output
-sbatch recipe/run_agent.sbatch
-```
-
-After the job finishes:
-
-```bash
-python3 evaluate_run.py
-python3 wer/score_wer.py --trace run_output/trace.jsonl --references references.json --details --json
-```
+After the job finishes, run: `python3 evaluate_run.py` and `python3 wer/score_wer.py --trace run_output/trace.jsonl --references references.json --details --json`
 
 Dependency versions are in `recipe/requirements.txt`, and the output trace is written to `run_output/trace.jsonl`
 
